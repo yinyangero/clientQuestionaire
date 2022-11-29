@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--  <iframe
+      sandbox="allow-storage-access-by-user-activation
+                   allow-scripts
+                   allow-same-origin"
+    >
+    </iframe> -->
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script defer src="script.js"></script>
+    <script defer src="schema.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="spinner spinner--hidden"></div>
+    <div class="background"></div>
+    <div class="form">
+      <span class="material-icons floating-button"> save </span>
+      <div class="form__header">
+        <img
+          class="form__logo"
+          src="https://i0.wp.com/rev-upyourresume.com.au/wp-content/uploads/2019/02/Rev-Up-Your-Resume-Logo.png?resize=379%2C200&ssl=1"
+          alt="Logo"
+        />
+        <div class="form__title">
+          <h1>CLIENT QUESTIONAIRE</h1>
+          <p>
+            For us to be able to initiate the process of writing your new
+            resume, please send us the information requested on this
+            questionnaire.
+          </p>
+          <p>
+            This questionnaire is divided into 5 parts and will require
+            approximately 30-60 MINUTES.
+          </p>
+        </div>
+      </div>
+
+      <div class="form__body">
+        <div class="part">
+          <input type="checkbox" id="part00" class="part__checkbox" checked />
+          <label for="part00" class="part__title">
+            <span>Instructions </span>
+          </label>
+
+          <div class="part__content">
+            <p>
+              Please read and answer each questions thoroughly to avoid
+              potential delays in drafting your resume
+            </p>
+
+            <p>
+              Make sure that you save the file as you work to prevent unsaved
+              data
+            </p>
+          </div>
+        </div>
+
+        <div class="part">
+          <input type="checkbox" id="part01" class="part__checkbox" checked />
+          <label for="part01" class="part__title">
+            part 1.
+            <span>PERSONAL INFORMATION</span>
+          </label>
+
+          <div class="part__content">
+            <div class="question" id="name">
+              <div class="inputs__label full">
+                Question 1.
+                <span>Name:</span>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="givenName"
+                    placeholder="Given"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="middleName"
+                    placeholder="Middle Name (optional)"
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="familyName"
+                    placeholder="Family"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="address">
+              <div class="inputs__label full">
+                Question 2.
+                <span>Address:</span>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="address1"
+                    placeholder="Address"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="address2"
+                    placeholder="Address Line 2"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="citySuburb"
+                    placeholder="Suburb/ City"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="stateProvince"
+                    placeholder="State/ Province"
+                    required
+                  />
+                  <div class="inputs__note medium"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="postalZip"
+                    placeholder="Postal/ ZIP code"
+                  />
+                  <div class="inputs__note small"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="contact">
+              <div class="inputs__label full">
+                Question 3.
+                <span>Contact Information:</span>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="mobileNumber"
+                    placeholder="Mobile number (0# #### #####)"
+                    required
+                  />
+                  <div class="inputs__note">
+                    indicate just one number where you can be contacted often
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="email"
+                    placeholder="Email (username@domain.com)"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="position">
+              <div class="inputs__label" for="inpDesiredRoles">
+                Question 4. <span>Your Desired Roles/Position:</span>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    data-id="desiredPosition"
+                    rows="10"
+                    required
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="links">
+              <div class="inputs__label">
+                Question 5.
+                <span> Links to Job Advertisements</span>
+
+                <i class=""> (please copy and paste links):</i>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    data-id="jobLink"
+                    rows="2"
+                  ></textarea>
+
+                  <div class="inputs__note">
+                    If you currently don't have any specific role in mind,
+                    kindly share details of your future jobs so we can tailor
+                    your documents to the roles you seek.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="yearsRole">
+              <div class="inputs__label">
+                Question 6.
+                <span
+                  >How many years of experience do you have in your desired
+                  role?</span
+                >
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input small"
+                    data-id="jobExperience"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="yearsIndustry">
+              <div class="inputs__label">
+                Question 7.
+                <span>
+                  How many years of experience do you have in total, regardless
+                  of the industry or sector?</span
+                >
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input small"
+                    data-id="industryExperience"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button__clear" type="button">
+                <span class="material-icons"> refresh </span>
+                <span class="button__text"> Refresh part 1 </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="part">
+          <input type="checkbox" id="part02" class="part__checkbox" checked />
+          <label for="part02" class="part__title">
+            part 2.
+            <span>your unique differentiation</span>
+          </label>
+
+          <div class="part__content">
+            <div class="question" id="strengths">
+              <div class="inputs__label">
+                Question 8.
+                <span> What are your key strengths? </span>
+                Things employers are most interested in, reasons why you've been
+                hired in the past or capabilities that have led to your greatest
+                successes <i> (List 3-5 of your strongest capabilities)?</i>
+                <br />
+                <br />
+                <strong> Example: </strong> As a Sales Manager, I've been
+                recruited for my consultative selling, account management and
+                business development skills
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="1"
+                    placeholder="Capablity 1"
+                    data-id="capability1"
+                    required
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="1"
+                    placeholder="Capablity 2"
+                    data-id="capability2"
+                    required
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="1"
+                    placeholder="Capablity 3"
+                    data-id="capability3"
+                    required
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="1"
+                    placeholder="Capablity 4"
+                    data-id="capability4"
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="1"
+                    placeholder="Capablity 5"
+                    data-id="capability5"
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="reasons">
+              <div class="inputs__label">
+                Question 9.
+                <span>
+                  What are the top 3 reasons why someone should hire you?
+                </span>
+                Please provide concrete examples on how this 'trait' or
+                'attribute' was used in the past to achieve result
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="2"
+                    placeholder="Primary reason"
+                    data-id="reasonToHire1"
+                    required
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="2"
+                    placeholder="Second reason"
+                    data-id="reasonToHire2"
+                    required
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <textarea
+                    class="inputs__textarea textareas"
+                    rows="2"
+                    data-id="reasonToHire3"
+                    required
+                    placeholder="Third reason"
+                  ></textarea>
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button__clear" type="button">
+                <span class="material-icons"> refresh </span>
+                <span class="button__text"> Refresh part 2 </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="part">
+          <input type="checkbox" id="part03" class="part__checkbox" checked />
+          <label for="part03" class="part__title">
+            part 3.
+            <span>your career history </span>
+          </label>
+
+          <div class="part__content">
+            <div class="question" id="employers">
+              <div class="inputs__label">
+                Question 10.
+                <span> Employers.</span>
+                List recent employers from latest to oldest
+                <i>(click ‘Add Employer’ to add details of past employment).</i>
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input full"
+                    data-id="companyName"
+                    placeholder="Company name"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <label for="checkbox1" class="checkbox">
+                    Is the above company your current employer? Yes
+                    <input
+                      type="checkbox"
+                      class="checkbox__input isCurrentEmployer"
+                      data-id="isCurrentEmployer"
+                      id="checkbox1"
+                    />
+                    <div class="checkbox__box"></div>
+                  </label>
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <textarea
+                    class="inputs__textarea full"
+                    data-id="companyDescription"
+                    placeholder="Company short description"
+                    required
+                  ></textarea>
+                  <div class="inputs__note">
+                    Indicate the field or sector, product or services offered,
+                    company size, number of locations, etc.
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input full"
+                    data-id="companyWebiste"
+                    placeholder="Company website/URL"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">Start date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthFrom"
+                      required
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select
+                      class="inputs__select year small"
+                      data-id="yearFrom"
+                      required
+                    >
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">End date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthTo"
+                      required
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select
+                      class="inputs__select year small"
+                      data-id="yearTo"
+                      required
+                    >
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="jobTitle"
+                    placeholder="Job title"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="reportTo"
+                    placeholder="Job title of the person you report to"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="directReports"
+                    placeholder="Number of your direct reports (if any)"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    data-id="budgetResponsible"
+                    placeholder="If responsible for a budget, how much:"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">
+                    List down 5 activities and functions for this role.
+                  </div>
+
+                  <div class="inputs">
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        data-id="function1"
+                        placeholder="Activity/ function 1"
+                        rows="1"
+                        required
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Activity/ function 2"
+                        data-id="function2"
+                        rows="1"
+                        required
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Activity/ function 3"
+                        data-id="function3"
+                        rows="1"
+                        required
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Activity/ function 4"
+                        data-id="function4"
+                        rows="1"
+                        required
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Activity/ function 5"
+                        data-id="function5"
+                        rows="1"
+                        required
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">
+                    List down your 3 accomplishments for this role. Be specific.
+                    Include measurable results, figures and numbers. Use the CAR
+                    framework. Think of the <strong> CHALLENGES (C)</strong> you
+                    faced, the <strong> ACTIONS (A)</strong> you took, and the
+                    <strong> RESULTS (R)</strong>.
+                  </div>
+
+                  <div class="inputs">
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Accomplishment 1"
+                        data-id="accomplisment1"
+                        rows="1"
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Accomplishment 2"
+                        data-id="accomplisment2"
+                        rows="1"
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+                    <div>
+                      <textarea
+                        class="inputs__textarea full textareas"
+                        placeholder="Accomplishment 3"
+                        data-id="accomplisment3"
+                        rows="1"
+                      ></textarea>
+                      <div class="inputs__note"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="buttons">
+                  <button class="button__remove" type="button" disabled>
+                    <span class="material-icons"> delete </span>
+                    <span class="button__text"> Delete employer </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button class="button__add" type="button">
+                  <span class="material-icons"> add_circle </span>
+                  <span class="button__text"> Add employer </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="question" id="careerSummary">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 11.
+                  <span> Earlier Career Summary.</span>
+                  Please summarise any earlier periods of employment (not
+                  covered previously). Include company name/s, job title/s and
+                  inclusive months and years of employment.
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="earlierCareer"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="endorsements">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 12.
+                  <span> Endorsement and Recommendation.</span>
+                  If you have endorsements, recommendations or performance
+                  reviews that can be included in your profile, please provide
+                  the details below.
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="endorsementRecom"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button__clear" type="button">
+                <span class="material-icons"> refresh </span>
+                <span class="button__text"> Refresh part 3 </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="part">
+          <input type="checkbox" id="part04" class="part__checkbox" checked />
+          <label for="part04" class="part__title">
+            part 4.
+            <span>your qualifications </span>
+          </label>
+
+          <div class="part__content">
+            <div class="question">
+              <div class="inputs__label full">
+                Question 13.
+                <span> Education and Formal Training. </span>
+                Please list all universities, institutes and schools you've
+                attended after high school.
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input full"
+                    placeholder="Course, degree or program"
+                    data-id="courseDegree"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <label for="checkbox2" class="checkbox">
+                    Did you complete the above course, degree or program? Yes
+                    <input
+                      type="checkbox"
+                      class="checkbox__input"
+                      data-id="isCompleted"
+                      id="checkbox2"
+                    />
+                    <div class="checkbox__box"></div>
+                  </label>
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input full"
+                    placeholder="School, univeristy or institution name"
+                    data-id="schoolUniversity"
+                    required
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+                <div>
+                  <input
+                    class="inputs__input full"
+                    placeholder="Awards/recognition"
+                    data-id="awardsRecognition"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input medium"
+                    placeholder="Location (city and state)"
+                    data-id="cityState"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">Start date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthFrom"
+                      required
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select
+                      class="inputs__select year small"
+                      data-id="yearFrom"
+                      required
+                    >
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">End date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthTo"
+                      required
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select
+                      class="inputs__select year small"
+                      data-id="yearTo"
+                      required
+                    >
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="buttons">
+                  <button class="button__remove" type="button" disabled>
+                    <span class="material-icons"> delete </span>
+                    <span class="button__text">
+                      Delete education/training
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button class="button__add" type="button">
+                  <span class="material-icons"> add_circle </span>
+                  <span class="button__text"> Add education/training </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="question">
+              <div class="inputs__label full">
+                Question 14.
+                <span> Certificates, Licenses and Tickets. </span>
+                Please list down all licenses and certificates you have obtained
+                (note: only those that are still valid). Please include the name
+                of the awarding body and expiration date of your licenses.
+              </div>
+
+              <div class="inputs">
+                <div>
+                  <input
+                    class="inputs__input full"
+                    placeholder=" Certificate, License and Ticket"
+                    data-id="certificateLicense"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div>
+                  <input
+                    class="inputs__input full"
+                    placeholder="Issued by"
+                    data-id="issuedBy"
+                  />
+                  <div class="inputs__note"></div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">Start date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthFrom"
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select
+                      class="inputs__select year small"
+                      data-id="yearFrom"
+                    >
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="sub-question">
+                  <div class="inputs__label full">End date:</div>
+                  <div class="dates">
+                    <select
+                      class="inputs__select month small"
+                      data-id="monthTo"
+                    >
+                      <option value="" disabled selected>month</option>
+                    </select>
+
+                    <select class="inputs__select year small" data-id="yearTo">
+                      <option value="" disabled selected>year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="buttons">
+                  <button class="button__remove" type="button" disabled>
+                    <span class="material-icons"> delete </span>
+                    <span class="button__text">
+                      Delete licenses/ certificates
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <button class="button__add" type="button">
+                  <span class="material-icons"> add_circle </span>
+                  <span class="button__text"> Add licenses/ certificate </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button__clear" type="button">
+                <span class="material-icons"> refresh </span>
+                <span class="button__text"> Refresh part 4 </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="part">
+          <input type="checkbox" id="part05" class="part__checkbox" checked />
+          <label for="part05" class="part__title">
+            part 5.
+            <span>other value-adds </span>
+          </label>
+
+          <div class="part__content">
+            <div class="question" id="affiliation">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 15.
+                  <span>Professional Affiliations.</span>
+                  Please provide details of professional memberships relevant to
+                  the role you're applying for.
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="professionalAffiliation"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="awardsHonors">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 16.
+                  <span>Awards and Honours.</span>
+                  Have you received any awards, honours or recognitions in your
+                  personal or professional life? What were you recognised for?
+                  What did you receive? How? Why?
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="awardsHonors"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="technicalProficiency">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 17.
+                  <span> Technical Proficiency.</span>
+                  Please indicate any software programs, apps or online tools
+                  you use if they are relevant to your next role. Indicate your
+                  level of proficiency (
+                  <strong>A</strong> - Advanced; <strong>I</strong> -
+                  Intermediate; <strong>B</strong> - Basic )
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="technicalProficiency"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="languageSpoken">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 18.
+                  <span> Language Spoken.</span>
+                  Please indicate any language skills other than English and
+                  include your level of proficiency (
+                  <strong>A</strong> - Advanced; <strong>I</strong> -
+                  Intermediate; <strong>B</strong> - Basic )
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="languageSpoken"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" id="otherThings">
+              <div class="inputs">
+                <label class="inputs__label"
+                  >Question 18.
+                  <span>
+                    Other things you'd like to highlight in the new
+                    document:.</span
+                  >
+                  Use the space below to tell us about anything else you feel we
+                  should include, not to include or look for further info. If
+                  you have any special concerns regarding your resume, this is
+                  the place to write it down.
+                </label>
+                <div>
+                  <textarea
+                    class="inputs__textarea"
+                    rows="5"
+                    data-id="otherThings"
+                  ></textarea>
+
+                  <div class="inputs__note"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button__clear" type="button">
+                <span class="material-icons"> refresh </span>
+                <span class="button__text">Refresh part 5 </span>
+              </button>
+            </div>
+
+            <div class="buttons">
+              <button class="button__submit" type="submit">
+                <span class="material-icons"> send </span>
+                <span class="button__text">Submit response </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__footer"></div>
+    </div>
+
+    <div class="bottombar">
+      <div class="bottombar__content">
+        <div class="bottombar__text">
+          Action will save your responses in this online form to the local
+          storage.
+        </div>
+        <div class="bottombar__buttons">
+          <span class="bottombar__cancel">cancel</span>
+          <span class="bottombar__continue">continue</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
