@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="stylesheet.css" />
     <script defer src="script.js"></script>
+    <script defer src="schema.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -487,7 +488,7 @@
                 <div>
                   <input
                     class="inputs__input full"
-                    data-id="companyWebiste"
+                    data-id="company  site"
                     placeholder="Company website/URL"
                     required
                   />
@@ -499,7 +500,7 @@
                   <div class="dates">
                     <select
                       class="inputs__select month small"
-                      data-id="monthFrom"
+                      data-id="month"
                       required
                     >
                       <option value="" disabled selected>month</option>
@@ -507,7 +508,7 @@
 
                     <select
                       class="inputs__select year small"
-                      data-id="yearFrom"
+                      data-id="year"
                       required
                     >
                       <option value="" disabled selected>year</option>
@@ -549,7 +550,7 @@
                 <div>
                   <input
                     class="inputs__input medium"
-                    data-id="reportTo"
+                    data-id="reportsTo"
                     placeholder="Job title of the person you report to"
                     required
                   />
@@ -651,7 +652,7 @@
                       <textarea
                         class="inputs__textarea full textareas"
                         placeholder="Accomplishment 1"
-                        data-id="accomplisment1"
+                        data-id="accomplishment1"
                         rows="1"
                       ></textarea>
                       <div class="inputs__note"></div>
@@ -660,7 +661,7 @@
                       <textarea
                         class="inputs__textarea full textareas"
                         placeholder="Accomplishment 2"
-                        data-id="accomplisment2"
+                        data-id="accomplishment2"
                         rows="1"
                       ></textarea>
                       <div class="inputs__note"></div>
@@ -669,7 +670,7 @@
                       <textarea
                         class="inputs__textarea full textareas"
                         placeholder="Accomplishment 3"
-                        data-id="accomplisment3"
+                        data-id="accomplishment3"
                         rows="1"
                       ></textarea>
                       <div class="inputs__note"></div>
@@ -817,7 +818,7 @@
                   <div class="dates">
                     <select
                       class="inputs__select month small"
-                      data-id="monthFrom"
+                      data-id="month"
                       required
                     >
                       <option value="" disabled selected>month</option>
@@ -825,7 +826,7 @@
 
                     <select
                       class="inputs__select year small"
-                      data-id="yearFrom"
+                      data-id="year"
                       required
                     >
                       <option value="" disabled selected>year</option>
@@ -903,17 +904,11 @@
                 <div class="sub-question">
                   <div class="inputs__label full">Start date:</div>
                   <div class="dates">
-                    <select
-                      class="inputs__select month small"
-                      data-id="monthFrom"
-                    >
+                    <select class="inputs__select month small" data-id="month">
                       <option value="" disabled selected>month</option>
                     </select>
 
-                    <select
-                      class="inputs__select year small"
-                      data-id="yearFrom"
-                    >
+                    <select class="inputs__select year small" data-id="year">
                       <option value="" disabled selected>year</option>
                     </select>
                   </div>
@@ -1059,7 +1054,7 @@
             <div class="question" id="otherThings">
               <div class="inputs">
                 <label class="inputs__label"
-                  >Question 18.
+                  >Question 19.
                   <span>
                     Other things you'd like to highlight in the new
                     document:.</span
