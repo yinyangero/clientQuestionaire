@@ -223,7 +223,7 @@ const submitResponse = async () => {
       })
     );
 
-    const url = `https://script.google.com/macros/s/AKfycbz0yBnh4fDjeYp3J4gFgq5jViBtLLU9Cw8E52PwtG-HmyN7OAUMWj4AJdBSbka16sMtlA/exec`;
+    const url = `https://script.google.com/macros/s/AKfycbwDwPiO31Ilq1HhbtYstP6couLV8zKx1ifxs9iLviBmlE8X2BBVEDAeVI2wbOmWG36ggA/exec`;
     const response = await fetch(url, {
       method: "POST",
       body: formData,
